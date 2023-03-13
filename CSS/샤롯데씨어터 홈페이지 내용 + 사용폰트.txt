@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+font-family: 'Raleway', sans-serif;
+
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+font-family: 'Sawarabi Mincho', serif;
+
+@font-face {
+    font-family: 'SeoulHangangM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulHangangM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+character & cast
+
+스위니토드
+sweeney todd
+아내와 딸을 빼앗기고 외딴 섬으로 추방을 당한 뒤, 15년만에 돌아온 비운의 이발사
+강필석 신성록 이규형
+
+러빗부인
+mrs.lovett
+어디로 튈지 모르는 파이 가게 주인 스위니토드에게 연정을 품고 그의 복수를 돕는다
+전미도 김지현 린아
+
+터핀판사
+judge turpin
+욕정으로 가득하고 부도덕한 판사 스위니토드의 아내를 빼앗았고, 수양딸인 조안나까지 탐한다
+김대종 박인배
+
+안소니
+anthoy
+스위니토드를 구해준 젊은 선원 조안나를 보고 운명적인 사랑에 빠진다
+진태화 노윤
+
+토비아스
+thbias
+러빗부인이 거둔 단순하고 순진한 소년 파이 가게의 일을 돕는다
+윤은오 윤석호
+
+조안나
+johanna
+스위니토드의 아름다운 딸 터핀판사에게 강제로 입양 당해 갇혀 살며 바깥 세상을 동경한다
+최서연 류인아
+
+reviews
+"굉장한 쇼, 섬뜩하고 잔인하게 독창적이다"
+-the new york times-
+
+"수년 동안 끊임없이 이야기 할 수 밖에 없는 사건"
+- the wall street journal-
+
+"악마들은 이 매혹적인 걸작에 대해 
+다시 생각하느라 서성거릴지도 모른다"
+- rolling stone -
+
+"상황은 잔혹하지만 지금을 겨냥한 정확한 풍자가
+묘한 카타르시스를 안기며
+그간 뮤지컬에서 체험하지 못한 정서를 안겨준다"
+- 조선일보 -
+
+"광기 어린 연기와 귀에 낯선 불협화음은
+그 자체로 마성의 레시피
+안 먹어보고는 못 배길 명작을 완성했다"
+- 서울경제 -

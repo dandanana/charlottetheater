@@ -1,0 +1,838 @@
+@import url(common.css);
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+@font-face {/* 지마켓 산스 - 라이트 */
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {/* 한국기계연구원 - 볼드 */
+  font-family: 'KIMM_Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {/* 지마켓 산스 - 미디움 */
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {/* 서울한강체 */
+  font-family: 'SeoulHangangM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulHangangM.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {/* 빛의 계승자체 - 라이트 */
+  font-family: 'HeirofLight';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/heiroflight/HeirofLightRegular.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/heiroflight/HeirofLightRegular.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/heiroflight/HeirofLightRegular.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/heiroflight/HeirofLightRegular.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/heiroflight/HeirofLightRegular.ttf') format("truetype");
+  font-display: swap;
+}
+@font-face {/* 지마켓 산스 - 볼드 */
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face { /* 세방고딕 */
+  font-family: 'SEBANG_Gothic_Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face { /* 조선일보명조체 */
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html{scroll-behavior: smooth;}
+
+body{background-color: #d1b464;}
+
+
+/*-------------------탑버튼------------------------- */
+@keyframes circle{
+  0%{transform: rotate(0);} 
+  50%{transform: rotate(180deg);}
+  100%{transform: rotate(360deg);}
+}
+
+.top{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 1000;
+}
+.cover{
+  position: absolute;
+  right: 20px;
+  z-index: 1000;
+  transition: 3s;
+}
+.cover:hover{transform: translateX( -50px );}
+.lp{animation: circle 0.1s infinite;}
+.lp:hover{animation: none;}
+
+
+/*~~~~~~~~~~~~~~~~~ 헤더 ~~~~~~~~~~~~~~~~~~~~~~~*/
+#wrap{
+  margin: auto;
+  margin: 20px;
+}
+header{background-color: #cf1218;}
+/* 로고 + 유틸리티 메뉴 위치 */
+.nav_in{
+  /* border: 1px solid #fff; */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+.toplogo{margin-left: 50px;}
+.smallmenu1{
+  margin-right: 50px;
+  text-align: center;
+}
+.smallmenu1 a{
+  list-style-type: none;
+  padding: 0 5px;
+  font-size: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #181717;
+  /* margin-left: 5px; */
+  transition: 0.1s;
+}
+.smallmenu1 a:not(:first-child){border-left: 1px solid #181717;}
+.smallmenu1 a:hover{
+  font-weight: 600;
+}
+.smallmenu2 a{
+  font-family: 'GmarketSansLight';
+  font-size: 11px;
+  color: #fff;
+  transition: 0.1s;
+}
+.smallmenu2 a:not(:first-child){border-left: 1px solid #fff;}
+.smallmenu2 a:hover{color: #d1b464;}
+
+/* 탑메뉴 */
+.gnb{
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.gnb>.menu_main{
+  /* border: 1px solid #02bd24; */
+  width: 150px;
+  text-align: center;
+  position: relative;
+}
+.gnb>.menu_main>a{
+  /* border: 1px solid skyblue; */
+  position: relative;
+  display: block;
+  width: inherit;
+  height: 50px;
+  font-size: 20px;
+  color: #fff;
+  padding-top: 12px;
+  box-sizing: border-box;
+  font-family: 'KIMM_Bold';
+}
+
+/* 서브 메뉴 */
+.sub{
+  display: none;
+  background: #fff;
+  position: absolute;
+  border-radius: 20px;
+}
+.sub li{
+  float: left;
+  padding: 0 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.sub li a {
+  font-family: 'GmarketSansMedium';
+	color: #666;
+	font-size: 14px;
+  
+}
+.sub li:hover a{color: #d1b464;}
+/*서브메뉴 가로폭,나오는위치값->부모영역을 벗어나서 위치를 잡기 위함*/
+.s1{left:-150px;width:700px;}
+.s2{left:-100px;width:600px;}
+.s3{left:-25px;width:200px;}
+.s4{left:0px; width:150px;}
+.s5{left:-35px;width:250px;}
+.s6{left:-30px;width:350px;}
+.s7{left:-30px;width:300px;}
+
+/*탑메뉴 밑줄 호버 설정*/
+.btn1,.btn2,.btn3,.btn4,.btn5,.btn6,.btn7{position: relative;}
+/* 탑메뉴 밑줄 호버 세부 설정 */
+.btn1:before, 
+.btn2:before,
+.btn3:before, 
+.btn4:before,
+.btn5:before, 
+.btn6:before,
+.btn7:before{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #d1b464;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  margin-bottom:5px;
+}
+/* 호버효과 */
+.btn1:hover:before,
+.btn2:hover:before,
+.btn3:hover:before,
+.btn4:hover:before,
+.btn5:hover:before,
+.btn6:hover:before,
+.btn7:hover:before
+{width: 100%;}
+
+
+/* ~~~~~~~~~~~~~~~~메인 ~~~~~~~~~~~~~~*/
+main{
+  background-color: #cf1218;
+  height: 800px;/* 임시 */
+  margin-bottom: 20px;
+}
+#main{
+  padding-top: 100px;
+}
+/* ++++++++++++++++메인 애니메이션 상자++++++++++++++ */
+@keyframes anibox {
+  0%{
+    background-color: yellow;
+    width: 100px;
+    height: 10px;
+  }
+  50%{
+    background-color: rgb(246, 245, 155);
+    width: 500px;
+    height: 50px;
+  }
+  100%{
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    height: 50px;
+  }
+}
+.box{
+  width: 800px;
+  height: 50px;
+  background-color: #fff;
+  font-size: 30px;
+  animation: anibox 1.3s  forwards;
+  text-align: right;
+  padding-right: 50px;
+  font-family: 'Raleway', sans-serif;
+  padding-top: 20px;
+  margin-bottom: 80px;
+}
+
+@keyframes anibox1 {
+  from{width: 0px;height: 0px;}
+  to{width: 100%;height: 480px;}
+  }
+.box1{
+  background-color: #1a4863;
+  animation: anibox1 2s linear forwards;
+}
+
+/* +++++++++++++++++++++메인 이미지 설정+++++++++++++++++++ */
+.fadeShow01{ /* 부모설정 및 위치잡기 */
+  position: relative;
+  width: 100%; /* 풀버전이니까 */
+  height: 550px;
+  margin: auto;
+  /* border: 3px solid pink; */
+}
+/* (1)이미지 모두 동일한 위치, 안보이게 함 */
+.changeimg01 ul li{
+  display: none;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+}
+.changeimg01 img{
+  padding-left: 100px;
+  margin-top: -180px;
+}
+/* (2)첫번째 이미지만 보임 */
+.changeimg01 ul li:first-child{
+  display: block;
+}
+
+/* 하단버튼 */
+.btn01{
+  position: absolute;
+  bottom: 1%;
+  left:45%;
+}
+.btn01 ul li{
+  float: left;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.btn01 ul li.active{
+  width:50px;
+  background: #f4d277;
+  border-radius: 30px;
+}
+/* ++++++++++++++++++문구++++++++++++++++++++ */
+.changeimg01 ul li dl{
+  position: absolute;
+  top:20px;
+  left:630px;
+  color:#fff;
+}
+.changeimg01 ul li dl dt{
+  font-size: 50px;
+  font-family: 'GmarketSansMedium';
+}
+.changeimg01 ul li dl dt span{
+  font-size: 35px;
+  letter-spacing: -1px;
+}
+.changeimg01 ul li dl dd:nth-of-type(1){
+  font-size: 14px;
+  color:#ddd;
+  font-family: 'GmarketSansMedium';
+}
+.changeimg01 ul li dl dd:nth-of-type(2){
+  width: 180px;
+  height: 50px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 50px;
+  font-size: 15px;
+  margin-top:40px;
+}
+
+
+/*~~~~~~~~~~~~~~셀렉션~~~~~~~~~~~~~~~~~~~ */
+section{
+  width: 100%;
+  }
+
+  /* 콘텐츠-1 */
+  #cast{
+    background-color: #0e2939;
+    height: 900px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  /* ++++++++++++캐릭터 + 케스트 타이틀+++++++++++ */
+  .cast_title{
+    font-family: 'Sawarabi Mincho', serif;
+    font-size: 90px;
+    text-align: center;
+    color: #6e6b6b;
+    padding-top: 40px;
+  }
+  /* ++++++++++++캐릭터 + 케스트 설명+++++++++++ */
+  .fadeShow{/* 슬라이드 + 하단 버튼 + 좌우버튼 부모설정 및 위치잡기 */
+    position: relative;
+    width: 100%;
+    height: 730px;
+    margin: auto;
+  }
+
+  /* (1)이미지 모두 동일한 위치, 안보이게 함 */
+  .changeimg ul li{
+    position: absolute;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* (2)첫번째 이미지만 보임 */
+  .changeimg ul li:first-child{
+    display: block;
+  }
+  .cast_text{/* 등장인물 설명 꾸미기 */
+    display: flex;
+    font-family: 'SeoulHangangM';
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 40px;
+  }
+  .cast_text h4{
+    color:#960909;
+    padding-right: 30px;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .cast_text p{
+    color:#fff;
+    font-style: italic;
+    font-size: 22px;
+  }
+  /* ++++++++++++캐릭터 + 케스트 설명+++++++++++ */
+  .cast_img{
+    padding-top: 100px;
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  .cast_imgs{
+    /* border: 1px solid #ffb8f1; */
+    position: relative;
+    width: 225px;
+    height: 300px;
+    margin:0 80px;
+  }
+  .cast_imgs img{
+    width: 225px;
+    height: 300px;
+    opacity: 1;
+    filter: grayscale(100%);
+    transition: 0.6s;
+  }
+  .front, .back{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: inherit;
+    text-align: center;
+    box-sizing: border-box;
+    transition: 0.6s;
+  }
+  .cast_imgs:hover .front{top:0;}
+  .cast_imgs img:hover{
+    filter: none;
+    transform: scale(1.1);
+  }
+  .cast_imgs:hover .back{
+    transform: scale(1.1);
+    top:23%;
+    opacity: 1;}
+  .front{z-index: 1;}
+  .back{
+    opacity:0;
+    background-color: #960909;
+    color: #fefefe;
+    border-radius: 0 0 10% 10% ;
+  } 
+  .back h2{
+    padding-top: 250px;
+    font-family: 'HeirofLight';}
+
+/* 하단버튼 */
+.fadeShow .btn{
+  position:absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn ul li{
+  float: left;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.btn ul li.active{background: #960909;}
+
+/* 좌우버튼 */
+.side_btn .lbtn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  width: 65px;
+  height: 65px;
+  background: url(../image/left-off.png) no-repeat; 
+}
+.side_btn .lbtn:hover{
+  background: url(../image/left-on.png)no-repeat;
+}
+.side_btn .rbtn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background: url(../image/right-off.png) no-repeat; 
+}
+.side_btn .rbtn:hover{
+  background: url(../image/right-on.png)no-repeat;
+}
+
+  /* 콘텐츠-2 */
+  #review{
+    background-color: #0a1318;
+    height: 1200px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+    /* ++++++++++++리뷰 타이틀+++++++++++ */
+    .review_title{
+      font-family:'Sawarabi Mincho', serif;
+      font-size: 90px;
+      text-align: center;
+      color: #7b0f13;
+      padding-top: 40px;
+      padding-bottom: 50px;
+    }
+    /* ++++++++++++리뷰 포토 + 설명+++++++++++ */
+    .review_cotet{
+      line-height: 50px;
+    }
+    .review_photos{/* 공통으로 들어가는 요소 */
+      height: 900px;
+      /* width: 100%; */
+      display: flex;
+    }
+    .review_photos li{
+      border: 5px solid #0a1318;
+      flex: 1; /* 1:1:1 하겠다는 뜻, 똑같은 크기로 나눔 */
+      position: relative;/* 부모 선언 */
+      overflow: hidden;
+      transition: 1s;
+      filter: grayscale(5);
+    }
+    /* .review_photos li:last-child{border-right: none;} */
+    .review_photos li:nth-child(1){background: url(../image/review-1.png)no-repeat center center;}
+    .review_photos li:nth-child(2){background: url(../image/review-2.png)no-repeat center center;}
+    .review_photos li:nth-child(3){background: url(../image/review-3.png)no-repeat center center;}
+    .review_photos li:nth-child(4){background: url(../image/review-4.png)no-repeat center center;}
+    .review_photos li:nth-child(5){background: url(../image/review-5.png)no-repeat center center;}
+
+    .review_photos li:hover{
+      flex: 2;/* 2크기로 넓힘 */
+      filter: none;
+    }
+
+    .review_photo{
+      position: absolute;
+      bottom: -400px; /* content:before 설정 후 변경하기, 그 전에는 0으로 보여지게 설정 */
+      background-color: #2f1b1c;
+      color: #fff;
+      width: 100%;
+      height: 300px;
+      padding-top: 80px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: 0.5s;
+    }
+    .review_photo:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      background-color: #2f1b1c;
+      width: 100%;
+      height: 60px;
+      left: -15px;
+      transform: rotate(-5deg) scale(1.5);
+      transform-origin: left bottom;
+      }
+      .review_photos li:hover .review_photo{
+        bottom: 0;
+        transition: 1s;
+      }
+      .review_photo p{
+        font-family: 'GmarketSansMedium';
+        font-size: 20px;
+      }
+      .review_photo span{
+        font-family: 'GmarketSansLight';
+        color: #2c7381;
+        font-size: 18px;
+      }
+
+  /* 콘텐츠-3 */
+  #introduce{
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  /*++++++++++++홍보 이미지 배경+++++++++++*/
+  .intro_photo{
+    background: url(../image/intro.png)no-repeat center center;
+    /* background-size: 100%; */
+    width: 100%;
+    height: 600px;
+  }
+  .intro_photo:hover{background-image: url(../image/intro_hover.png);}
+
+  /*++++++++++++홍보 문구+++++++++++*/
+  .intro_text{
+    text-align: center;
+    color: #fff;
+  }
+  .intro_text h4{
+    font-size: 50px;
+    font-family: 'GmarketSansMedium';
+    padding-bottom: 60px;
+    padding-top: 50px;
+    color: #282626;
+  }
+  .intro_text h1{
+    font-family: 'GmarketSansBold';
+    font-size: 100px;
+    padding-bottom: 80px;
+  }
+
+  /*++++++++++++홍보 아이콘+++++++++++*/
+  .intro_icon{
+    position: absolute;
+    /* border: 1px solid #000; */
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+    /* margin: 10px auto; */
+    display: flex;
+    text-align: center;
+  }
+  .icon{
+    /* border: 1px solid #ffb8f1; */
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 85px;
+    left: -20px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .icon img{
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+  }
+  .icon_front, .icon_back{
+    position: absolute;
+    left: 0;/* ffb8f1색 icon border 안에 다 들어감 */
+    width: 100%;/* 부모의 100프로 */
+    height: inherit;
+    text-align: center;
+    box-sizing: border-box;
+    transition: 0.5s;/* 공통인 곳에 transition 넣어주기 */
+  }
+  .icon:hover .icon_front{left:-30%;}
+  .icon:hover .icon_back{
+    left:30%;
+    opacity: 1;
+  }
+  .icon_front{z-index: 1;}
+  .icon_back{
+    opacity: 0;
+    background-color: #c01318;
+    border: 3px solid #ffda75;
+    height: 80px;
+    width: 200px;
+    border-radius: 50px;
+    padding: 23px;
+  }
+  .icon_back a{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'KIMM_Bold';
+  }
+
+  /* 콘텐츠-4 */
+  #addservice{
+    background-color: #cf1218;
+    margin-bottom: 20px;
+    height: 650px;
+    width: 100%;
+  }
+
+  /*++++++++++++서비스 타이틀+++++++++++*/
+  .service_title{
+    font-family: 'SEBANG_Gothic_Bold';
+    text-align: center;
+    font-size: 80px;
+    padding: 40px 0;
+    color: #dfdedb;
+  }
+
+  /*++++++++++++서비스 아이콘 + 내용+++++++++++*/
+  .service_cotet{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+  }
+  .service_cotet a{
+    display: inline-block;
+    border: 5px solid #d1b464;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .service_cotet a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    height: 0;
+    background-color:#18451f;
+    transition: 1s;
+  }
+  .service_cotet a:hover:before{height: 100%;}
+  .service_cotet img{padding-top: 10px;}
+  .service_cotet a img{
+    position: relative;
+    transition: 0.5s;
+  }
+  .service_cotet a:hover img{transform: rotateY(360deg);}
+  .service_cotet h2{
+    font-family: 'GmarketSansMedium';
+    font-size: 30px;
+    color: #fff;
+    padding-top: 20px;
+  }
+
+  /* +++++++++++애니메이션 적용+++++++++++++ */
+  @keyframes ani01 {
+    0%{transform: translate(0,0);}
+    50%{transform: translate(0,-50px);}
+    100%{transform: translate(0px, 0px);}
+    }
+  @keyframes ani02 {
+    0%{transform: translate(0,0);}
+    50%{transform: translate(0,30px);}
+    100%{transform: translate(0px, 0px);}
+    }
+  @keyframes ani03 {
+    0%{transform: translate(0,0);}
+    50%{transform: translate(0,-20px);}
+    100%{transform: translate(0px, 0px);}
+    }
+  @keyframes ani04 {
+    0%{transform: translate(0,0);}
+    50%{transform: translate(0,20px);}
+    100%{transform: translate(0px, 0px);}
+    }
+  @keyframes ani05 {
+    0%{transform: translate(0,0);}
+    50%{transform: translate(0,-35px);}
+    100%{transform: translate(0px, 0px);}
+    }  
+  .ticket{animation: ani01 9s infinite;}
+  .hall{animation: ani02 8s infinite;}
+  .glass{animation: ani03 9s infinite;}
+  .notice{animation: ani04 8s infinite;}
+  .seat{animation: ani05 9s infinite;}
+
+
+/* 푸터 */
+footer{
+  margin: 20px;
+  width: 100%;
+  height: 300px;
+}
+
+/* ++++++++++++푸터 작은 메뉴++++++++++++ */
+.footer_{
+  height: 60px;
+  margin-right: 40px;
+}
+.footer_menu{
+  width: 100%;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer_menu a{
+  font-family: 'KIMM_Bold';
+  font-size: 21px;
+  color: #efefef;
+  transition: 0.6s;
+}
+.footer_menu a:before{
+  content:"\f0a4";
+  font-family: fontawesome;
+  color: #9a1a1a;
+  margin-right: 10px;
+  opacity: 0;
+  transition: 0.6s;
+  }
+.footer_menu a:hover:before{opacity: 1;}
+.footer_menu:hover a{opacity: 0.3;}
+.footer_menu a:hover{opacity: 1;}
+
+/* ++++++++++++푸터 내용++++++++++++ */
+.f-text{
+  width: 100%;
+  margin-top: 30px;
+}
+.txt1{
+  font-family: 'SEBANG_Gothic_Bold';
+  color:#474444;
+  font-size: 18px;
+  justify-content: center;
+  display: flex;
+}
+.txt1 p{margin: 10px 20px;}
+.txt1 p:before{
+  content:"\f27b";
+  font-family: fontawesome;
+  margin-right: 12px;
+  transition: 0.5s;
+}
+.txt2{
+  margin-top: 30px;
+  text-align: center;
+  line-height: 25px;
+  font-family: 'Chosunilbo_myungjo';
+  color:#464646;
+  font-size: 16px;
+}
+address{
+  margin-top: 40px;
+  font-family: 'GmarketSansMedium';
+  color: #383838;
+  font-style: normal;
+  font-size: 12px;
+  text-align: center;
+}
